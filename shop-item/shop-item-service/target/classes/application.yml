@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: item-service
+  datasource:
+    url: jdbc:mysql:///shop
+    username: root
+    password: 123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 15 #过期时间
+    lease-renewal-interval-in-seconds: 5 #心跳时间
+mybatis:
+  type-aliases-package: com.shop.item.pojo
