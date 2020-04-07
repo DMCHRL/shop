@@ -20,6 +20,18 @@ public interface BrandService {
      */
     PageResult<Brand> pageList(String key, Integer page, Integer rows, String sortBy, boolean desc);
 
+    /**
+     * 保存品牌
+     * @param brand
+     * @param cid
+     */
     void saveBrand(Brand brand,List<Long> cid);
+
+    /**
+     * 根据类别id查询
+     * @param cid
+     * @return
+     */
+    List<Brand> findByCid(Long cid);
 
 }

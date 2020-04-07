@@ -3,6 +3,7 @@ package com.shop.item.service.impl;
 import com.shop.item.mapper.SpecGroupMapper;
 import com.shop.item.mapper.SpecParamMapper;
 import com.shop.item.pojo.SpecGroup;
+import com.shop.item.pojo.SpecParam;
 import com.shop.item.service.SpecificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,4 +37,31 @@ public class SpecificationServiceImpl  implements SpecificationService {
     public void deleteById(Long id) {
         specGroupMapper.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public List<SpecParam> paramByGidOrCid(Long gid,Long cid) {
+        SpecParam specParam = new SpecParam();
+        if(gid != null){
+            specParam.setGroupId(gid);
+        }
+        if(cid != null){
+            specParam.setCid(cid);
+        }
+        return  specParamMapper.select(specParam);
+    }
+
+    @Override
+    public void saveParam(SpecParam specParam) {
+        if(specParam.getId() == null){
+            specParamMapper.insert(specParam);
+        }else {
+            specParamMapper.updateByPrimaryKey(specParam);
+        }
+    }
+
+    @Override
+    public void deleteParamById(Long id) {
+        specParamMapper.deleteByPrimaryKey(id);
+    }
+
 }

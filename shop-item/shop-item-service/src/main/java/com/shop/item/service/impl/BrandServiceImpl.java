@@ -49,4 +49,9 @@ public class BrandServiceImpl implements BrandService {
             });
         }
     }
+
+    @Override
+    public List<Brand> findByCid(Long cid) {
+        return brandMapper.findBrandsByCid(cid);
+    }
 }

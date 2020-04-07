@@ -8,18 +8,25 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
-@Table(name = "tb_category")
+@Table(name = "tb_sku")
 @Data
-@NoArgsConstructor
 @Accessors(chain = true)
-public class Category {
+@NoArgsConstructor
+public class Sku {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private Long parentId;
-    private Boolean isParent;
-    private Integer sort;
+    private Long spuId;
+    private String title;
+    private String images;
+    private Long price;
+    private String indexes;
+    private String ownSpec;
+    private Boolean enable;
+    private Date createTime;
+    private Date lastUpdateTime;
+
 }

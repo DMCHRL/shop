@@ -1,11 +1,13 @@
 package com.shop.item.pojo;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import javax.persistence.*;
 
 @Table(name = "tb_spec_param")
 @Data
+@Accessors(chain = true)
 public class SpecParam {
 
     @Id
@@ -19,7 +21,7 @@ public class SpecParam {
     private String unit;
     private Boolean generic;
     private Boolean searching;
-    private String segment;
+    private String segments;
 
 
 }
