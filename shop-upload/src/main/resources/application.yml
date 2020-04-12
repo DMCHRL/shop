@@ -15,11 +15,11 @@ eureka:
     lease-expiration-duration-in-seconds: 15
 
 fdfs:
-  so-timeout: 1501 #超时时间
-  connect-timeout: 601 #连接超时时间
+  so-timeout: 150100 #超时时间
+  connect-timeout: 60100 #连接超时时间
   thumb-image: #缩略图
     width: 60
     height: 60
   tracker-list: #tracker地址
-    - 192.168.236.129:22122
-fdfsPath: http://192.168.236.129:8888/
+    - 000.copain.xyz:8080
+fdfsPath: http://00.copain.xyz:8080/

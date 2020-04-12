@@ -37,4 +37,9 @@ public class BrandController {
     public ResponseEntity<List<Brand>> page(@PathVariable(value = "cid",required = false) Long cid){
         return ResponseEntity.ok(brandService.findByCid(cid));
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Brand> getById(@PathVariable(value = "id",required = false) Long id){
+        return ResponseEntity.ok(brandService.findById(id));
+    }
 }

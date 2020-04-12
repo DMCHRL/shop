@@ -64,4 +64,21 @@ public class SpecificationServiceImpl  implements SpecificationService {
         specParamMapper.deleteByPrimaryKey(id);
     }
 
+    @Override
+    public List<SpecParam> queryParams(Long gid, Long cid, Boolean generic, Boolean searching) {
+        SpecParam specParam = new SpecParam();
+        if(gid != null){
+            specParam.setGroupId(gid);
+        }
+        if(cid != null){
+            specParam.setCid(cid);
+        }
+        if(generic != null){
+            specParam.setGeneric(generic);
+        }
+        if(searching != null){
+            specParam.setSearching(searching);
+        }
+        return  specParamMapper.select(specParam);
+    }
 }

@@ -12,4 +12,8 @@ public interface CategoryService {
      * @return
      */
     List<Category> getByPid(Long parentId);
+
+    List<Category> getByCidList(List<Long> cidList);
+
+    Category getById(Long id);
 }

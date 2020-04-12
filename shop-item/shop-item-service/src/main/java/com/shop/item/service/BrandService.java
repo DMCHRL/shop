@@ -2,8 +2,6 @@ package com.shop.item.service;
 
 import com.shop.common.pojo.PageResult;
 import com.shop.item.pojo.Brand;
-import com.shop.item.pojo.Category;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -33,5 +31,7 @@ public interface BrandService {
      * @return
      */
     List<Brand> findByCid(Long cid);
+
+    Brand findById(Long id);
 
 }

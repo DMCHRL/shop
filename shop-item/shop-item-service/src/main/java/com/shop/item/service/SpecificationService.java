@@ -20,4 +20,6 @@ public interface SpecificationService {
     void deleteParamById(Long id);
 
 
+    List<SpecParam> queryParams(Long gid,Long cid,Boolean generic,Boolean searching);
+
 }

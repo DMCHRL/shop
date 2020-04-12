@@ -4,11 +4,8 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.shop.common.pojo.PageResult;
 import com.shop.item.mapper.BrandMapper;
-import com.shop.item.mapper.CategoryMapper;
 import com.shop.item.pojo.Brand;
-import com.shop.item.pojo.Category;
 import com.shop.item.service.BrandService;
-import com.shop.item.service.CategoryService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +33,7 @@ public class BrandServiceImpl implements BrandService {
         }
         List<Brand> result = brandMapper.selectByExample(example);
         PageInfo<Brand> pageInfo = new PageInfo<>(result);
-        return PageResult.build(pageInfo.getTotal(),pageInfo.getList());
+        return PageResult.build(pageInfo.getTotal(),pageInfo.getSize(),pageInfo.getList());
     }
 
     @Override
@@ -53,5 +50,10 @@ public class BrandServiceImpl implements BrandService {
     @Override
     public List<Brand> findByCid(Long cid) {
         return brandMapper.findBrandsByCid(cid);
+    }
+
+    @Override
+    public Brand findById(Long id) {
+        return brandMapper.selectByPrimaryKey(id);
     }
 }

@@ -1,11 +1,13 @@
 package com.shop.item.service;
 
 import com.shop.common.pojo.PageResult;
+import com.shop.item.bo.GoodsSearchBO;
 import com.shop.item.dto.Goods;
-import com.shop.item.pojo.Category;
+import com.shop.item.pojo.Sku;
 import com.shop.item.pojo.Spu;
 
 import java.util.List;
+import java.util.Map;
 
 public interface SpuService {
 
@@ -24,5 +26,15 @@ public interface SpuService {
      * @param goods
      */
     void saveGoods(Goods goods);
+
+    /**
+     * 获取数据库所有商品信息
+     * @return
+     */
+    List<GoodsSearchBO> getAllGoodsSearch();
+
+    List<Sku> findBySpuId(Long spuId);
+
+    Map<String,Object> getGoodsDetails(Long spuId);
 
 }

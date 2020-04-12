@@ -10,7 +10,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("category")
-//@CrossOrigin //支持跨域
 public class CategoryController {
 
     @Autowired
@@ -19,5 +18,10 @@ public class CategoryController {
     @GetMapping("list")
     public ResponseEntity<List<Category>> listByPid(@RequestParam Long pid){
         return ResponseEntity.ok(categoryService.getByPid(pid));
+    }
+
+    @GetMapping("id")
+    public ResponseEntity<Category> getById(@RequestParam Long id){
+        return ResponseEntity.ok(categoryService.getById(id));
     }
 }
