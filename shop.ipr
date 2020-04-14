@@ -2,38 +2,51 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="shop-common" />
-        <module name="shop-gateway" />
-        <module name="shop-item-interface" />
-        <module name="shop-item-service" />
+        <module name="shop-goods-web" />
         <module name="shop-registry" />
         <module name="shop-upload" />
+        <module name="shop-item-interface" />
+        <module name="shop-item-service" />
+        <module name="shop-gateway" />
+        <module name="shop-search" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="shop" target="1.8" />
       <module name="shop-common" target="1.8" />
       <module name="shop-gateway" target="1.8" />
+      <module name="shop-goods-web" target="1.8" />
       <module name="shop-item" target="1.8" />
       <module name="shop-item-interface" target="1.8" />
       <module name="shop-item-service" target="1.8" />
       <module name="shop-registry" target="1.8" />
+      <module name="shop-search" target="1.8" />
       <module name="shop-upload" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-goods-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-item" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-item/shop-item-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-item/shop-item-interface/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-item/shop-item-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-item/shop-item-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-registry" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-registry/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-search/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop-upload" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop-upload/src/main/java" charset="UTF-8" />
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="InspectionProjectProfileManager">
@@ -73,6 +86,18 @@
       <inspection_tool class="SpringJavaInjectionPointsAutowiringInspection" enabled="false" level="ERROR" enabled_by_default="false" />
     </profile>
     <version value="1.0" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="shop-common" options="-parameters" />
+      <module name="shop-gateway" options="-parameters" />
+      <module name="shop-goods-web" options="-parameters" />
+      <module name="shop-item-interface" options="-parameters" />
+      <module name="shop-item-service" options="-parameters" />
+      <module name="shop-registry" options="-parameters" />
+      <module name="shop-search" options="-parameters" />
+      <module name="shop-upload" options="-parameters" />
+    </option>
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -207,15 +232,39 @@
       <module fileurl="file://$PROJECT_DIR$/shop.iml" filepath="$PROJECT_DIR$/shop.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-common/shop-common.iml" filepath="$PROJECT_DIR$/shop-common/shop-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-gateway/shop-gateway.iml" filepath="$PROJECT_DIR$/shop-gateway/shop-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-goods-web/shop-goods-web.iml" filepath="$PROJECT_DIR$/shop-goods-web/shop-goods-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-item/shop-item.iml" filepath="$PROJECT_DIR$/shop-item/shop-item.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-item/shop-item-interface/shop-item-interface.iml" filepath="$PROJECT_DIR$/shop-item/shop-item-interface/shop-item-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-item/shop-item-service/shop-item-service.iml" filepath="$PROJECT_DIR$/shop-item/shop-item-service/shop-item-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-registry/shop-registry.iml" filepath="$PROJECT_DIR$/shop-registry/shop-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-search/shop-search.iml" filepath="$PROJECT_DIR$/shop-search/shop-search.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-upload/shop-upload.iml" filepath="$PROJECT_DIR$/shop-upload/shop-upload.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
@@ -265,6 +314,28 @@
         <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.alibaba:fastjson:1.2.57">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.57/fastjson-1.2.57.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.57/fastjson-1.2.57-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.57/fastjson-1.2.57-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.carrotsearch:hppc:0.7.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/carrotsearch/hppc/0.7.1/hppc-0.7.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/carrotsearch/hppc/0.7.1/hppc-0.7.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/carrotsearch/hppc/0.7.1/hppc-0.7.1-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar!/" />
@@ -298,6 +369,28 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.9.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.9.7/jackson-dataformat-cbor-2.9.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.9.7/jackson-dataformat-cbor-2.9.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.9.7/jackson-dataformat-cbor-2.9.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.9.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.9.7/jackson-dataformat-smile-2.9.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.9.7/jackson-dataformat-smile-2.9.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.9.7/jackson-dataformat-smile-2.9.7-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.7">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.9.7/jackson-dataformat-xml-2.9.7.jar!/" />
@@ -307,6 +400,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.9.7/jackson-dataformat-xml-2.9.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.7/jackson-dataformat-yaml-2.9.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.7/jackson-dataformat-yaml-2.9.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.7/jackson-dataformat-yaml-2.9.7-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.7">
@@ -441,6 +545,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.2/pagehelper-5.1.2-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.github.spullara.mustache.java:compiler:0.9.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/github/spullara/mustache/java/compiler/0.9.3/compiler-0.9.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/github/spullara/mustache/java/compiler/0.9.3/compiler-0.9.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/github/spullara/mustache/java/compiler/0.9.3/compiler-0.9.3-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.github.tobato:fastdfs-client:1.26.1-RELEASE">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/github/tobato/fastdfs-client/1.26.1-RELEASE/fastdfs-client-1.26.1-RELEASE.jar!/" />
@@ -461,6 +576,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/com/github/vlsi/compactmap/compactmap/1.2.1/compactmap-1.2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.google.code.findbugs:annotations:3.0.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/annotations/3.0.1/annotations-3.0.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/annotations/3.0.1/annotations-3.0.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/annotations/3.0.1/annotations-3.0.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.google.code.findbugs:jsr305:3.0.1">
@@ -782,6 +908,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-servlet/1.19.1/jersey-servlet-1.19.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.tdunning:t-digest:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/tdunning/t-digest/3.0/t-digest-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/tdunning/t-digest/3.0/t-digest-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/tdunning/t-digest/3.0/t-digest-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.thoughtworks.xstream:xstream:1.4.10">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/" />
@@ -802,6 +939,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.vividsolutions:jts:1.13">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/vividsolutions/jts/1.13/jts-1.13.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/vividsolutions/jts/1.13/jts-1.13-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/vividsolutions/jts/1.13/jts-1.13-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.zaxxer:HikariCP:2.7.9">
@@ -870,6 +1018,28 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-configuration/commons-configuration/1.8/commons-configuration-1.8-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: commons-fileupload:commons-fileupload:1.3.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: commons-io:commons-io:2.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.2/commons-io-2.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.2/commons-io-2.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.2/commons-io-2.2-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: commons-io:commons-io:2.4">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.4/commons-io-2.4.jar!/" />
@@ -903,6 +1073,72 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: io.github.openfeign.form:feign-form-spring:3.3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/form/feign-form-spring/3.3.0/feign-form-spring-3.3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/form/feign-form-spring/3.3.0/feign-form-spring-3.3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/form/feign-form-spring/3.3.0/feign-form-spring-3.3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.github.openfeign.form:feign-form:3.3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/form/feign-form/3.3.0/feign-form-3.3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/form/feign-form/3.3.0/feign-form-3.3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/form/feign-form/3.3.0/feign-form-3.3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.github.openfeign:feign-core:9.7.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-core/9.7.0/feign-core-9.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-core/9.7.0/feign-core-9.7.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-core/9.7.0/feign-core-9.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.github.openfeign:feign-hystrix:9.7.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-hystrix/9.7.0/feign-hystrix-9.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-hystrix/9.7.0/feign-hystrix-9.7.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-hystrix/9.7.0/feign-hystrix-9.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.github.openfeign:feign-java8:9.7.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-java8/9.7.0/feign-java8-9.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-java8/9.7.0/feign-java8-9.7.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-java8/9.7.0/feign-java8-9.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.github.openfeign:feign-slf4j:9.7.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-slf4j/9.7.0/feign-slf4j-9.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-slf4j/9.7.0/feign-slf4j-9.7.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-slf4j/9.7.0/feign-slf4j-9.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: io.micrometer:micrometer-core:1.0.7">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-core/1.0.7/micrometer-core-1.0.7.jar!/" />
@@ -912,6 +1148,83 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-core/1.0.7/micrometer-core-1.0.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.netty:netty-buffer:4.1.29.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.29.Final/netty-buffer-4.1.29.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.29.Final/netty-buffer-4.1.29.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.29.Final/netty-buffer-4.1.29.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.netty:netty-codec-http:4.1.29.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-codec-http/4.1.29.Final/netty-codec-http-4.1.29.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-codec-http/4.1.29.Final/netty-codec-http-4.1.29.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-codec-http/4.1.29.Final/netty-codec-http-4.1.29.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.netty:netty-codec:4.1.29.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-codec/4.1.29.Final/netty-codec-4.1.29.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-codec/4.1.29.Final/netty-codec-4.1.29.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-codec/4.1.29.Final/netty-codec-4.1.29.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.netty:netty-common:4.1.29.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-common/4.1.29.Final/netty-common-4.1.29.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-common/4.1.29.Final/netty-common-4.1.29.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-common/4.1.29.Final/netty-common-4.1.29.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.netty:netty-handler:4.1.29.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-handler/4.1.29.Final/netty-handler-4.1.29.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-handler/4.1.29.Final/netty-handler-4.1.29.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-handler/4.1.29.Final/netty-handler-4.1.29.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.netty:netty-resolver:4.1.29.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-resolver/4.1.29.Final/netty-resolver-4.1.29.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-resolver/4.1.29.Final/netty-resolver-4.1.29.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-resolver/4.1.29.Final/netty-resolver-4.1.29.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: io.netty:netty-transport:4.1.29.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.29.Final/netty-transport-4.1.29.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.29.Final/netty-transport-4.1.29.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.29.Final/netty-transport-4.1.29.Final-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: io.reactivex:rxjava-reactive-streams:1.2.1">
@@ -1101,6 +1414,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/net/coobird/thumbnailator/0.4.8/thumbnailator-0.4.8-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: net.jcip:jcip-annotations:1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: net.minidev:accessors-smart:1.2">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar!/" />
@@ -1121,6 +1445,28 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/net/minidev/json-smart/2.3/json-smart-2.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: net.sf.jopt-simple:jopt-simple:5.0.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jopt-simple/jopt-simple/5.0.2/jopt-simple-5.0.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jopt-simple/jopt-simple/5.0.2/jopt-simple-5.0.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jopt-simple/jopt-simple/5.0.2/jopt-simple-5.0.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: net.sf.trove4j:core:3.1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/trove4j/core/3.1.0/core-3.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/trove4j/core/3.1.0/core-3.1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/trove4j/core/3.1.0/core-3.1.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.antlr:antlr-runtime:3.4">
@@ -1178,6 +1524,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-pool2/2.5.0/commons-pool2-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.apache.httpcomponents:httpasyncclient:4.1.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpasyncclient/4.1.4/httpasyncclient-4.1.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpasyncclient/4.1.4/httpasyncclient-4.1.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpasyncclient/4.1.4/httpasyncclient-4.1.4-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.apache.httpcomponents:httpclient:4.5.6">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6.jar!/" />
@@ -1187,6 +1544,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.6/httpclient-4.5.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.httpcomponents:httpcore-nio:4.4.10">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore-nio/4.4.10/httpcore-nio-4.4.10.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore-nio/4.4.10/httpcore-nio-4.4.10-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore-nio/4.4.10/httpcore-nio-4.4.10-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.apache.httpcomponents:httpcore:4.4.10">
@@ -1220,6 +1588,171 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-analyzers-common:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-analyzers-common/6.6.1/lucene-analyzers-common-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-analyzers-common/6.6.1/lucene-analyzers-common-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-analyzers-common/6.6.1/lucene-analyzers-common-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-backward-codecs:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-backward-codecs/6.6.1/lucene-backward-codecs-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-backward-codecs/6.6.1/lucene-backward-codecs-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-backward-codecs/6.6.1/lucene-backward-codecs-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-core:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-core/6.6.1/lucene-core-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-core/6.6.1/lucene-core-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-core/6.6.1/lucene-core-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-grouping:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-grouping/6.6.1/lucene-grouping-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-grouping/6.6.1/lucene-grouping-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-grouping/6.6.1/lucene-grouping-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-highlighter:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-highlighter/6.6.1/lucene-highlighter-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-highlighter/6.6.1/lucene-highlighter-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-highlighter/6.6.1/lucene-highlighter-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-join:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-join/6.6.1/lucene-join-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-join/6.6.1/lucene-join-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-join/6.6.1/lucene-join-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-memory:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-memory/6.6.1/lucene-memory-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-memory/6.6.1/lucene-memory-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-memory/6.6.1/lucene-memory-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-misc:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-misc/6.6.1/lucene-misc-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-misc/6.6.1/lucene-misc-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-misc/6.6.1/lucene-misc-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-queries:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-queries/6.6.1/lucene-queries-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-queries/6.6.1/lucene-queries-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-queries/6.6.1/lucene-queries-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-queryparser:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-queryparser/6.6.1/lucene-queryparser-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-queryparser/6.6.1/lucene-queryparser-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-queryparser/6.6.1/lucene-queryparser-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-sandbox:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-sandbox/6.6.1/lucene-sandbox-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-sandbox/6.6.1/lucene-sandbox-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-sandbox/6.6.1/lucene-sandbox-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-spatial-extras:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-spatial-extras/6.6.1/lucene-spatial-extras-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-spatial-extras/6.6.1/lucene-spatial-extras-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-spatial-extras/6.6.1/lucene-spatial-extras-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-spatial3d:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-spatial3d/6.6.1/lucene-spatial3d-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-spatial3d/6.6.1/lucene-spatial3d-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-spatial3d/6.6.1/lucene-spatial3d-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-spatial:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-spatial/6.6.1/lucene-spatial-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-spatial/6.6.1/lucene-spatial-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-spatial/6.6.1/lucene-spatial-6.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.lucene:lucene-suggest:6.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-suggest/6.6.1/lucene-suggest-6.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-suggest/6.6.1/lucene-suggest-6.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-suggest/6.6.1/lucene-suggest-6.6.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.34">
@@ -1277,6 +1810,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.attoparser:attoparser:2.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.bouncycastle:bcpkix-jdk15on:1.60">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar!/" />
@@ -1330,6 +1874,116 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.elasticsearch.client:elasticsearch-rest-client:5.6.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/client/elasticsearch-rest-client/5.6.12/elasticsearch-rest-client-5.6.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/client/elasticsearch-rest-client/5.6.12/elasticsearch-rest-client-5.6.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/client/elasticsearch-rest-client/5.6.12/elasticsearch-rest-client-5.6.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.elasticsearch.client:transport:5.6.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/client/transport/5.6.12/transport-5.6.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/client/transport/5.6.12/transport-5.6.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/client/transport/5.6.12/transport-5.6.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.elasticsearch.plugin:lang-mustache-client:5.6.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/lang-mustache-client/5.6.12/lang-mustache-client-5.6.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/lang-mustache-client/5.6.12/lang-mustache-client-5.6.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/lang-mustache-client/5.6.12/lang-mustache-client-5.6.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.elasticsearch.plugin:parent-join-client:5.6.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/parent-join-client/5.6.12/parent-join-client-5.6.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/parent-join-client/5.6.12/parent-join-client-5.6.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/parent-join-client/5.6.12/parent-join-client-5.6.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.elasticsearch.plugin:percolator-client:5.6.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/percolator-client/5.6.12/percolator-client-5.6.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/percolator-client/5.6.12/percolator-client-5.6.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/percolator-client/5.6.12/percolator-client-5.6.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.elasticsearch.plugin:reindex-client:5.6.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/reindex-client/5.6.12/reindex-client-5.6.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/reindex-client/5.6.12/reindex-client-5.6.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/reindex-client/5.6.12/reindex-client-5.6.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.elasticsearch.plugin:transport-netty4-client:5.6.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/transport-netty4-client/5.6.12/transport-netty4-client-5.6.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/transport-netty4-client/5.6.12/transport-netty4-client-5.6.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/plugin/transport-netty4-client/5.6.12/transport-netty4-client-5.6.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.elasticsearch:elasticsearch:5.6.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/5.6.12/elasticsearch-5.6.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/5.6.12/elasticsearch-5.6.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/5.6.12/elasticsearch-5.6.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.elasticsearch:jna:4.4.0-1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/jna/4.4.0-1/jna-4.4.0-1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/jna/4.4.0-1/jna-4.4.0-1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/jna/4.4.0-1/jna-4.4.0-1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.elasticsearch:securesm:1.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/securesm/1.2/securesm-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/securesm/1.2/securesm-1.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/elasticsearch/securesm/1.2/securesm-1.2-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.freemarker:freemarker:2.3.28">
@@ -1418,6 +2072,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.locationtech.spatial4j:spatial4j:0.6">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/locationtech/spatial4j/spatial4j/0.6/spatial4j-0.6.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/locationtech/spatial4j/spatial4j/0.6/spatial4j-0.6-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/locationtech/spatial4j/spatial4j/0.6/spatial4j-0.6-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.mapstruct:mapstruct-processor:1.3.0.Final">
@@ -1651,6 +2316,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-aop/2.0.6.RELEASE/spring-boot-starter-aop-2.0.6.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.springframework.boot:spring-boot-starter-data-elasticsearch:2.0.6.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-elasticsearch/2.0.6.RELEASE/spring-boot-starter-data-elasticsearch-2.0.6.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-elasticsearch/2.0.6.RELEASE/spring-boot-starter-data-elasticsearch-2.0.6.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-elasticsearch/2.0.6.RELEASE/spring-boot-starter-data-elasticsearch-2.0.6.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.springframework.boot:spring-boot-starter-freemarker:2.0.6.RELEASE">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-freemarker/2.0.6.RELEASE/spring-boot-starter-freemarker-2.0.6.RELEASE.jar!/" />
@@ -1704,6 +2380,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.0.6.RELEASE/spring-boot-starter-test-2.0.6.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework.boot:spring-boot-starter-thymeleaf:2.0.6.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-thymeleaf/2.0.6.RELEASE/spring-boot-starter-thymeleaf-2.0.6.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-thymeleaf/2.0.6.RELEASE/spring-boot-starter-thymeleaf-2.0.6.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-thymeleaf/2.0.6.RELEASE/spring-boot-starter-thymeleaf-2.0.6.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.0.6.RELEASE">
@@ -1860,6 +2547,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.0.2.RELEASE/spring-cloud-netflix-zuul-2.0.2.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.springframework.cloud:spring-cloud-openfeign-core:2.0.2.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-openfeign-core/2.0.2.RELEASE/spring-cloud-openfeign-core-2.0.2.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-openfeign-core/2.0.2.RELEASE/spring-cloud-openfeign-core-2.0.2.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-openfeign-core/2.0.2.RELEASE/spring-cloud-openfeign-core-2.0.2.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-archaius:2.0.2.RELEASE">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-archaius/2.0.2.RELEASE/spring-cloud-starter-netflix-archaius-2.0.2.RELEASE.jar!/" />
@@ -1915,6 +2613,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-netflix-zuul/2.0.2.RELEASE/spring-cloud-starter-netflix-zuul-2.0.2.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.springframework.cloud:spring-cloud-starter-openfeign:2.0.2.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-openfeign/2.0.2.RELEASE/spring-cloud-starter-openfeign-2.0.2.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-openfeign/2.0.2.RELEASE/spring-cloud-starter-openfeign-2.0.2.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-openfeign/2.0.2.RELEASE/spring-cloud-starter-openfeign-2.0.2.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.springframework.cloud:spring-cloud-starter:2.0.2.RELEASE">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/2.0.2.RELEASE/spring-cloud-starter-2.0.2.RELEASE.jar!/" />
@@ -1924,6 +2633,28 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter/2.0.2.RELEASE/spring-cloud-starter-2.0.2.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework.data:spring-data-commons:2.0.11.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.11.RELEASE/spring-data-commons-2.0.11.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.11.RELEASE/spring-data-commons-2.0.11.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.11.RELEASE/spring-data-commons-2.0.11.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework.data:spring-data-elasticsearch:3.0.11.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-elasticsearch/3.0.11.RELEASE/spring-data-elasticsearch-3.0.11.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-elasticsearch/3.0.11.RELEASE/spring-data-elasticsearch-3.0.11.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-elasticsearch/3.0.11.RELEASE/spring-data-elasticsearch-3.0.11.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.springframework.security:spring-security-crypto:5.0.9.RELEASE">
@@ -2078,6 +2809,50 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.10.RELEASE/spring-webmvc-5.0.10.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.1.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/extras/thymeleaf-extras-java8time/3.0.1.RELEASE/thymeleaf-extras-java8time-3.0.1.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/extras/thymeleaf-extras-java8time/3.0.1.RELEASE/thymeleaf-extras-java8time-3.0.1.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/extras/thymeleaf-extras-java8time/3.0.1.RELEASE/thymeleaf-extras-java8time-3.0.1.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.thymeleaf:thymeleaf-spring5:3.0.10.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf-spring5/3.0.10.RELEASE/thymeleaf-spring5-3.0.10.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf-spring5/3.0.10.RELEASE/thymeleaf-spring5-3.0.10.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf-spring5/3.0.10.RELEASE/thymeleaf-spring5-3.0.10.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.thymeleaf:thymeleaf:3.0.10.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf/3.0.10.RELEASE/thymeleaf-3.0.10.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf/3.0.10.RELEASE/thymeleaf-3.0.10.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf/3.0.10.RELEASE/thymeleaf-3.0.10.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.unbescape:unbescape:1.1.6.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.xmlunit:xmlunit-core:2.5.1">

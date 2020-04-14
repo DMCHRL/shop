@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="093b779e-13c5-483d-ab3e-6778b39d1349" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-common/target/classes/com/shop/common/pojo/PageResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-gateway/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-gateway/target/classes/com/shop/ShopGateWayApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-gateway/target/classes/com/shop/gateway/config/ShopCorsConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-goods-web/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-goods-web/target/classes/com/shop/ShopGoodsWebApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-goods-web/target/classes/com/shop/client/GoodsClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-goods-web/target/classes/com/shop/controller/GoodsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-goods-web/target/classes/com/shop/service/GoodsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-goods-web/target/classes/com/shop/service/impl/GoodServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-goods-web/target/classes/templates/item.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/api/BrandApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/api/CategoryApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/api/GoodsApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/api/SpecificationApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/bo/GoodsSearchBO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/convert/SpuConvert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/convert/SpuConvertImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/dto/Goods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/pojo/Brand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/pojo/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/pojo/Sku.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/pojo/SpecGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/pojo/SpecParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/pojo/Spu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/classes/com/shop/item/pojo/SpuDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-interface/target/generated-sources/annotations/com/shop/item/convert/SpuConvertImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/ItemServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/controller/BrandController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/controller/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/controller/GoodsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/controller/SpecificationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/controller/SpuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/mapper/BrandMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/mapper/CategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/mapper/SkuMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/mapper/SpecGroupMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/mapper/SpecParamMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/mapper/SpuDetailMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/mapper/SpuMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/service/BrandService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/service/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/service/SpecificationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/service/SpuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/service/impl/BrandServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/service/impl/CategoryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/service/impl/SpecificationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/service/impl/SpuServiceImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/service/impl/SpuServiceImpl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-item/shop-item-service/target/classes/com/shop/item/service/impl/SpuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-registry/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-registry/target/classes/com/shop/ShopRegistryApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-search/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-search/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-search/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-search/target/test-classes/com/shop/search/ShopSearchTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-upload/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-upload/target/classes/com/shop/ShopUploadApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-upload/target/classes/com/shop/upload/config/FastClientImporter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-upload/target/classes/com/shop/upload/controller/UploadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-upload/target/classes/com/shop/upload/service/UploadService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-upload/target/test-classes/com/shop/upload/FastDFSTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/shop.ipr" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../devSorftware/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="E:\devSorftware\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aSmQhjYyigzLIgLGWXUM065tdw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ShopSearchTest.addIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shop-search" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shop.search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shop.search" />
+      <option name="MAIN_CLASS_NAME" value="com.shop.search.ShopSearchTest" />
+      <option name="METHOD_NAME" value="addIndex" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ShopSearchTest.addIndex" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="093b779e-13c5-483d-ab3e-6778b39d1349" name="Default Changelist" comment="" />
+      <created>1586737355788</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586737355788</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="933" y="447" key="FileChooserDialogImpl" timestamp="1586828533285">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="933" y="447" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1586828533285" />
+    <state width="2070" height="277" key="GridCell.Tab.0.bottom" timestamp="1586827253980">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2070" height="277" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1586827253980" />
+    <state width="2070" height="277" key="GridCell.Tab.0.center" timestamp="1586827253980">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2070" height="277" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1586827253980" />
+    <state width="2070" height="277" key="GridCell.Tab.0.left" timestamp="1586827253979">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2070" height="277" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1586827253979" />
+    <state width="2070" height="277" key="GridCell.Tab.0.right" timestamp="1586827253980">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2070" height="277" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1586827253980" />
+    <state x="637" y="305" key="SettingsEditor" timestamp="1586826944323">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="637" y="305" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1586826944323" />
+    <state x="188" y="290" width="1928" height="832" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1586828538746">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="188" y="290" width="1928" height="832" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586828538746" />
+    <state x="950" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586825601647">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="950" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1586825601647" />
+    <state x="540" y="367" key="new project wizard" timestamp="1586827252755">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="540" y="367" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1586827252755" />
+  </component>
+</project>

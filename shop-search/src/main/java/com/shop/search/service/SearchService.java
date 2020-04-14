@@ -8,4 +8,6 @@ import com.shop.search.pojo.GoodsSearch;
 public interface SearchService  {
 
     SearchResult search(GoodsSearchDTO goodsSearchDTO);
+
+    void updateGoodsIndex(Long spuId);
 }

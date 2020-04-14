@@ -6,7 +6,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-04-12T10:14:13+0800",
+    date = "2020-04-14T13:55:21+0800",
     comments = "version: 1.3.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 public class SpuConvertImpl implements SpuConvert {
@@ -32,5 +32,28 @@ public class SpuConvertImpl implements SpuConvert {
         spu.setLastUpdateTime( goods.getLastUpdateTime() );
 
         return spu;
+    }
+
+    @Override
+    public Goods spu2Goods(Spu spu) {
+        if ( spu == null ) {
+            return null;
+        }
+
+        Goods goods = new Goods();
+
+        goods.setId( spu.getId() );
+        goods.setTitle( spu.getTitle() );
+        goods.setSubTitle( spu.getSubTitle() );
+        goods.setCid1( spu.getCid1() );
+        goods.setCid2( spu.getCid2() );
+        goods.setCid3( spu.getCid3() );
+        goods.setBrandId( spu.getBrandId() );
+        goods.setSaleable( spu.getSaleable() );
+        goods.setValid( spu.getValid() );
+        goods.setCreateTime( spu.getCreateTime() );
+        goods.setLastUpdateTime( spu.getLastUpdateTime() );
+
+        return goods;
     }
 }

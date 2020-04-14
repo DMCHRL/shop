@@ -2,7 +2,9 @@ package com.shop.item.controller;
 
 import com.shop.common.pojo.PageResult;
 import com.shop.item.bo.GoodsSearchBO;
+import com.shop.item.dto.Goods;
 import com.shop.item.pojo.Spu;
+import com.shop.item.pojo.SpuDetail;
 import com.shop.item.service.SpuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -28,13 +30,18 @@ public class SpuController {
     }
 
     @GetMapping("getAllGoodsSearch")
-    public ResponseEntity<List<GoodsSearchBO>> getAllGoodsSearch(){
-        return ResponseEntity.ok(spuService.getAllGoodsSearch());
+    public ResponseEntity<List<GoodsSearchBO>> getAllGoodsSearch(@RequestParam(value = "spuId",required = false)Long spuId){
+        return ResponseEntity.ok(spuService.getAllGoodsSearch(spuId));
     }
 
     @GetMapping("getGoodsDetails")
     public ResponseEntity<Map<String,Object>> getGoodsDetails(@RequestParam(value = "spuId",required = false) Long spuId){
         return ResponseEntity.ok( spuService.getGoodsDetails(spuId));
+    }
+
+    @GetMapping("detail/{spuId}")
+    public ResponseEntity<SpuDetail> detail(@PathVariable Long spuId){
+        return ResponseEntity.ok( spuService.getSpuDetails(spuId));
     }
 
 }

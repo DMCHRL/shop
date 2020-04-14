@@ -5,8 +5,14 @@ spring:
     name: search-service
   data:
     elasticsearch:
-      cluster-nodes: 192.168.236.129:9300
+      #cluster-nodes: 192.168.236.129:9300
+      cluster-nodes: localhost:9300
       cluster-name: elasticsearch
+  rabbitmq:
+    host: 192.168.1.135
+    port: 5672
+    username: shop
+    password: shop
 eureka:
   client:
     service-url:

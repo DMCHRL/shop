@@ -36,7 +36,7 @@ public class ShopSearchTest {
     @Test
     public void addValue(){
         List<GoodsSearch> goodsSearchList = new ArrayList<>();
-        List<GoodsSearchBO> allGoodsSearch = goodsClient.getAllGoodsSearch();
+        List<GoodsSearchBO> allGoodsSearch = goodsClient.getAllGoodsSearch(null);
         allGoodsSearch.forEach( t -> {
             GoodsSearch goodsSearch = new GoodsSearch();
             goodsSearch.setId(t.getId());

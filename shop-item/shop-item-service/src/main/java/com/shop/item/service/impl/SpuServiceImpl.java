@@ -4,8 +4,11 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.shop.common.config.rabbitmq.RabbitExchangeEnum;
+import com.shop.common.config.rabbitmq.RabbitKeyEnum;
 import com.shop.common.pojo.PageResult;
 import com.shop.item.bo.GoodsSearchBO;
+import com.shop.item.config.TopicRabbitConfig;
 import com.shop.item.convert.SpuConvert;
 import com.shop.item.dto.Goods;
 import com.shop.item.mapper.SkuMapper;
@@ -18,6 +21,9 @@ import com.shop.item.service.SpecificationService;
 import com.shop.item.service.SpuService;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.core.ExchangeTypes;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
@@ -46,6 +52,9 @@ public class SpuServiceImpl implements SpuService {
     @Autowired
     private SpecificationService specificationService;
 
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
 
 
     @Override
@@ -60,6 +69,12 @@ public class SpuServiceImpl implements SpuService {
         PageHelper.startPage(page,rows);
         List<Spu> spus = spuMapper.selectByExample(example);
         PageInfo<Spu> pageInfo = new PageInfo<>(spus);
+        pageInfo.getList().forEach( t -> {
+            List<String> collect = categoryService.getByCidList(Arrays.asList(t.getCid1(), t.getCid2(), t.getCid3())).stream()
+                    .map(Category::getName).collect(Collectors.toList());
+            t.setCname(StringUtils.join(collect,"/"));
+            t.setBname(brandService.findById(t.getBrandId()).getName());
+        });
         return PageResult.build(pageInfo.getTotal(),pageInfo.getSize(),pageInfo.getList());
     }
 
@@ -70,21 +85,53 @@ public class SpuServiceImpl implements SpuService {
         spu.setSaleable(true);
         spu.setValid(true);
         spu.setCreateTime(date).setLastUpdateTime(date);
-        spuMapper.insert(spu);
+        if(spu.getId() == null){
+            spuMapper.insert(spu);
+        }else {
+            spuMapper.updateByPrimaryKey(spu);
+        }
         List<Sku> skus = goods.getSkus();
         skus.forEach( t -> {
             t.setSpuId(spu.getId()).setCreateTime(date).setLastUpdateTime(date);
-            skuMapper.insert(t);
+            if(spu.getId() == null){
+                skuMapper.insert(t);
+            }else {
+                skuMapper.updateByPrimaryKey(t);
+            }
         });
         SpuDetail spuDetail = goods.getSpuDetail();
         spuDetail.setSpuId(spu.getId());
-        spuDetailMapper.insert(spuDetail);
+        if(spu.getId() == null){
+            spuDetailMapper.insert(spuDetail);
+        }else {
+            spuDetailMapper.updateByPrimaryKey(spuDetail);
+        }
+        sendMsg(RabbitKeyEnum.ITEM_INSERT.getName(),spu.getId());
     }
 
     @Override
-    public List<GoodsSearchBO> getAllGoodsSearch() {
+    public SpuDetail getSpuDetails(Long supId) {
+       return spuDetailMapper.selectByPrimaryKey(supId);
+    }
+
+    private void sendMsg(String type, Long spuId) {
+        try{
+            rabbitTemplate.convertAndSend(RabbitExchangeEnum.SHEP_ITEM_EXCHANGE.getName(),type,spuId);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public List<GoodsSearchBO> getAllGoodsSearch(Long id) {
         List<GoodsSearchBO> result = new ArrayList<>();
-        List<Spu> spus = spuMapper.selectAll();
+        List<Spu> spus;
+        if(id == null){
+            spus = spuMapper.selectAll();
+        }else{
+            spus = new ArrayList<>();
+            spus.add(spuMapper.selectByPrimaryKey(id));
+        }
         spus.forEach( t -> {
             GoodsSearchBO goodsSearchBO = new GoodsSearchBO();
             goodsSearchBO.setId(t.getId());

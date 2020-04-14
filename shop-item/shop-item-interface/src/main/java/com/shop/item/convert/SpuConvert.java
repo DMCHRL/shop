@@ -14,4 +14,6 @@ public interface SpuConvert {
     SpuConvert INSTANCE= Mappers.getMapper(SpuConvert.class);
 
     Spu goods2Spu(Goods goods);
+
+    Goods spu2Goods(Spu spu);
 }

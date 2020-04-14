@@ -5,6 +5,7 @@ import com.shop.item.bo.GoodsSearchBO;
 import com.shop.item.dto.Goods;
 import com.shop.item.pojo.Sku;
 import com.shop.item.pojo.Spu;
+import com.shop.item.pojo.SpuDetail;
 
 import java.util.List;
 import java.util.Map;
@@ -27,11 +28,13 @@ public interface SpuService {
      */
     void saveGoods(Goods goods);
 
+    SpuDetail getSpuDetails(Long supId);
+
     /**
      * 获取数据库所有商品信息
      * @return
      */
-    List<GoodsSearchBO> getAllGoodsSearch();
+    List<GoodsSearchBO> getAllGoodsSearch(Long id);
 
     List<Sku> findBySpuId(Long spuId);
 

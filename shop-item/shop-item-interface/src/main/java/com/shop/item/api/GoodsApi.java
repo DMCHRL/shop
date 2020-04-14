@@ -17,7 +17,7 @@ public interface GoodsApi  {
      * @return
      */
     @GetMapping("getAllGoodsSearch")
-    public List<GoodsSearchBO> getAllGoodsSearch();
+    public List<GoodsSearchBO> getAllGoodsSearch(@RequestParam(value = "spuId",required = false)Long spuId);
 
     @GetMapping("getGoodsDetails")
     public Map<String,Object> getGoodsDetails(@RequestParam(value = "spuId",required = false) Long spuId);

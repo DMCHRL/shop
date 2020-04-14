@@ -28,5 +28,9 @@ public class Spu {
     private Boolean valid;
     private Date createTime;
     private Date lastUpdateTime;
+    @Transient
+    private String cname;
+    @Transient
+    private String bname;
 
 }

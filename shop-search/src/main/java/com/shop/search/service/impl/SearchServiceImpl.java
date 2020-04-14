@@ -1,11 +1,13 @@
 package com.shop.search.service.impl;
 
+import com.shop.item.bo.GoodsSearchBO;
 import com.shop.item.pojo.Brand;
 import com.shop.item.pojo.Category;
 import com.shop.item.pojo.SpecParam;
 import com.shop.search.bo.SearchResult;
 import com.shop.search.client.BrandClient;
 import com.shop.search.client.CategoryClient;
+import com.shop.search.client.GoodsClient;
 import com.shop.search.client.SpecificationClient;
 import com.shop.search.dto.GoodsSearchDTO;
 import com.shop.search.pojo.GoodsSearch;
@@ -43,6 +45,9 @@ public class SearchServiceImpl implements SearchService {
 
     @Autowired
     private CategoryClient categoryClient;
+
+    @Autowired
+    private GoodsClient goodsClient;
 
     @Autowired
     private SpecificationClient specificationClient;
@@ -150,5 +155,27 @@ public class SearchServiceImpl implements SearchService {
             categories.add(map);
         });
         return categories;
+    }
+
+    @Override
+    public void updateGoodsIndex(Long spuId) {
+        List<GoodsSearch> goodsSearchList = new ArrayList<>();
+        List<GoodsSearchBO> allGoodsSearch = goodsClient.getAllGoodsSearch(spuId);
+        allGoodsSearch.forEach( t -> {
+            GoodsSearch goodsSearch = new GoodsSearch();
+            goodsSearch.setId(t.getId());
+            goodsSearch.setAll(t.getAll());
+            goodsSearch.setSubTitle(t.getSubTitle());
+            goodsSearch.setCid1(t.getCid1());
+            goodsSearch.setCid2(t.getCid2());
+            goodsSearch.setCid3(t.getCid3());
+            goodsSearch.setBrandId(t.getBrandId());
+            goodsSearch.setCreateTime(t.getCreateTime());
+            goodsSearch.setPrice(t.getPrice());
+            goodsSearch.setSkus(t.getSkus());
+            goodsSearch.setSpecs(t.getSpecs());
+            goodsSearchList.add(goodsSearch);
+        });
+        goodsRepository.saveAll(goodsSearchList);
     }
 }
