@@ -3,21 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>shop</artifactId>
-        <groupId>com.shop.parent</groupId>
+        <artifactId>shop-sms</artifactId>
+        <groupId>com.shop.sms</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.shop.sms</groupId>
-    <artifactId>shop-sms</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>shop-sms-common</module>
-        <module>shop-sms-servive</module>
-    </modules>
+    <artifactId>shop-sms-common</artifactId>
 
 
-
-
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>

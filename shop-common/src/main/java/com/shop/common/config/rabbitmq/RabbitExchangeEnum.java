@@ -5,6 +5,7 @@ public enum RabbitExchangeEnum {
     SHEP_SMS_EXCHANGE("SHEP.SMS.EXCHANGE")
     ;
 
+
     private String name;
 
     RabbitExchangeEnum(String name) {
