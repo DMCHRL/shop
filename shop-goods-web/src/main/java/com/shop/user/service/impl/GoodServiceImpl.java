@@ -1,7 +1,7 @@
-package com.shop.service.impl;
+package com.shop.user.service.impl;
 
 import com.shop.client.GoodsClient;
-import com.shop.service.GoodsService;
+import com.shop.user.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

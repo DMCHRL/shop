@@ -1,6 +1,6 @@
-package com.shop.controller;
+package com.shop.user.controller;
 
-import com.shop.service.GoodsService;
+import com.shop.user.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

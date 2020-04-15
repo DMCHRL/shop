@@ -1,4 +1,4 @@
-package com.shop.service;
+package com.shop.user.service;
 
 import java.util.Map;
 

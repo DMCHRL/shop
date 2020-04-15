@@ -16,6 +16,8 @@
         <module>shop-upload</module>
         <module>shop-search</module>
         <module>shop-goods-web</module>
+        <module>shop-user</module>
+        <module>shop-sms</module>
     </modules>
 
     <name>shop</name>

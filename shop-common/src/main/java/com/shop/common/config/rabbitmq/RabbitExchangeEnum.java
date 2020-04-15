@@ -1,7 +1,9 @@
 package com.shop.common.config.rabbitmq;
 
 public enum RabbitExchangeEnum {
-    SHEP_ITEM_EXCHANGE("SHEP.ITEM.EXCHANGE");
+    SHEP_ITEM_EXCHANGE("SHEP.ITEM.EXCHANGE"),
+    SHEP_SMS_EXCHANGE("SHEP.SMS.EXCHANGE")
+    ;
 
     private String name;
 

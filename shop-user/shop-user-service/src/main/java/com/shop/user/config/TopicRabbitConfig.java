@@ -1,4 +1,4 @@
-package com.shop.item.config;
+package com.shop.user.config;
 
 import com.shop.common.config.rabbitmq.RabbitExchangeEnum;
 import com.shop.common.config.rabbitmq.RabbitKeyEnum;
@@ -16,18 +16,18 @@ public class TopicRabbitConfig {
 
     @Bean
     TopicExchange exchange() {
-        return new TopicExchange(RabbitExchangeEnum.SHEP_ITEM_EXCHANGE.getName());
+        return new TopicExchange(RabbitExchangeEnum.SHEP_SMS_EXCHANGE.getName());
     }
 
     @Bean
     public Queue itemFirstQueue() {
-        return new Queue(RabbitQueueEnum.SHOP_SAVE_INDEX_QUEUE.getName());
+        return new Queue(RabbitQueueEnum.SHOP_VERIFIED_SMS_QUEUE.getName());
     }
 
 
     @Bean
     Binding bindingExchangeMessage() {
-        return BindingBuilder.bind(itemFirstQueue()).to(exchange()).with(RabbitKeyEnum.ITEM_INSERT.getName());
+        return BindingBuilder.bind(itemFirstQueue()).to(exchange()).with(RabbitKeyEnum.VERIFIED_SMS.getName());
     }
 
 
