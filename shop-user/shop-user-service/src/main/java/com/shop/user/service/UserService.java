@@ -1,5 +1,7 @@
 package com.shop.user.service;
 
+import com.shop.user.dto.RegisterUser;
+
 public interface UserService {
 
     /**
@@ -15,4 +17,6 @@ public interface UserService {
      * @param phone
      */
     void code(String phone);
+
+    Boolean register(RegisterUser registerUser);
 }

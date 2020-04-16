@@ -1,5 +1,6 @@
 package com.shop.user.controller;
 
+import com.shop.user.dto.RegisterUser;
 import com.shop.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,8 +20,17 @@ public class UserController {
     }
 
     @PostMapping("code")
-    public ResponseEntity<Void> check(@RequestParam(value = "phone") String phone){
+    public ResponseEntity check(@RequestParam(value = "phone") String phone){
         userService.code(phone);
-        return ResponseEntity.status(HttpStatus.OK).build();
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PostMapping("register")
+    public ResponseEntity<Void> register(@RequestBody RegisterUser registerUser){
+        Boolean register = userService.register(registerUser);
+        if(!register){
+            return ResponseEntity.status(HttpStatus.BAD_GATEWAY).build();
+        }
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
