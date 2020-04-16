@@ -1,0 +1,14 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: auth-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 15 #过期时间
+    lease-renewal-interval-in-seconds: 5 #心跳时间
+mybatis:
+  type-aliases-package: com.shop.item.pojo

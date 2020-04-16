@@ -1,5 +1,6 @@
-package shop.config;
+package com.shop.auth.config;
 
+import com.shop.auth.component.RestfulAccessDeniedHandler;
 import com.shop.auth.componment.ShopPasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,10 +16,9 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import shop.component.GlobalUserDetailsService;
-import shop.component.JwtAuthenticationTokenFilter;
-import shop.component.RestAuthenticationEntryPoint;
-import shop.component.RestfulAccessDeniedHandler;
+import com.shop.auth.component.GlobalUserDetailsService;
+import com.shop.auth.component.JwtAuthenticationTokenFilter;
+import com.shop.auth.component.RestAuthenticationEntryPoint;
 
 @Configuration
 @EnableWebSecurity

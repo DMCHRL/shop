@@ -1,7 +1,7 @@
-package shop.component;
+package com.shop.auth.component;
 
-import com.shop.config.JwtProperties;
-import com.shop.util.JwtTokenUtil;
+import com.shop.auth.componment.JwtProperties;
+import com.shop.auth.utils.JwtTokenUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +20,7 @@ import java.io.IOException;
 
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     private static final Logger LOGGER = LoggerFactory.getLogger(JwtAuthenticationTokenFilter.class);
+
     @Autowired
     private UserDetailsService userDetailsService;
     @Autowired

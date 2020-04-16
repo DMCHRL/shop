@@ -1,4 +1,4 @@
-package shop.component;
+package com.shop.auth.component;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
