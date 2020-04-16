@@ -1,8 +1,7 @@
 package com.shop.user.service.impl;
 
 import cn.hutool.core.util.RandomUtil;
-import cn.hutool.core.util.StrUtil;
-import com.shop.auth.componment.ShopPasswordEncoder;
+import cn.hutool.crypto.digest.DigestUtil;
 import com.shop.common.config.rabbitmq.RabbitExchangeEnum;
 import com.shop.common.config.rabbitmq.RabbitKeyEnum;
 import com.shop.common.constant.BusinessEnum;
@@ -13,15 +12,14 @@ import com.shop.user.mapper.UserMapper;
 import com.shop.user.service.UserService;
 import com.shop.user.pojo.User;
 import org.springframework.amqp.core.AmqpTemplate;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
+import java.util.Collection;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -36,8 +34,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    @Autowired
-    private ShopPasswordEncoder shopPasswordEncoder;
 
 
     @Override
@@ -73,7 +69,20 @@ public class UserServiceImpl implements UserService {
         user.setPhone(registerUser.getPhone());
         user.setUsername(registerUser.getUsername());
         user.setCreated(new Date());
-        user.setPassword(shopPasswordEncoder.encode(registerUser.getPassword()));
+        user.setSalt("1");
+        user.setPassword(DigestUtil.md5Hex(registerUser.getPassword()));
         return userMapper.insert(user)  == 1;
+    }
+
+    @Override
+    public User queryUser(String username, String password) {
+        User user = new User().setUsername(username).setPassword(password);
+        return userMapper.selectOne(user);
+    }
+
+    @Override
+    public User findByName(String username) {
+        User user = new User().setUsername(username);
+        return userMapper.selectOne(user);
     }
 }

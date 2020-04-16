@@ -26,11 +26,13 @@ public class JwtProperties {
     /**
      * JWT的超期限时间(60*60*24) 31536000
      */
-    private Long expiration = 43200L;
+    private Integer expiration = 43200;
     /**
      * JWT负载中拿到开头
      */
     private String tokenStartHead = "Shop-";
+
+    private String cookieName = "SHOP_TOKEN";
 }
 
 

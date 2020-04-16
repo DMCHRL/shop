@@ -1,6 +1,7 @@
 package com.shop.user.service;
 
 import com.shop.user.dto.RegisterUser;
+import com.shop.user.pojo.User;
 
 public interface UserService {
 
@@ -19,4 +20,8 @@ public interface UserService {
     void code(String phone);
 
     Boolean register(RegisterUser registerUser);
+
+    User queryUser(String username,String password);
+
+    User findByName(String username);
 }

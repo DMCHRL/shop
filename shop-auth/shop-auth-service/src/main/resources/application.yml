@@ -10,5 +10,3 @@ eureka:
   instance:
     lease-expiration-duration-in-seconds: 15 #过期时间
     lease-renewal-interval-in-seconds: 5 #心跳时间
-mybatis:
-  type-aliases-package: com.shop.item.pojo

@@ -1,22 +1,23 @@
 package com.shop.auth.componment;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import cn.hutool.crypto.digest.DigestAlgorithm;
+import cn.hutool.crypto.digest.Digester;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ShopPasswordEncoder implements PasswordEncoder {
 
-    private final static BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+    private final static  Digester md5 = new Digester(DigestAlgorithm.MD5);
 
 
     @Override
     public String encode(CharSequence charSequence) {
-        return bCryptPasswordEncoder.encode(charSequence);
+        return md5.digestHex(charSequence.toString());
     }
 
     @Override
     public boolean matches(CharSequence charSequence, String s) {
-        return bCryptPasswordEncoder.matches(charSequence,s);
+        return md5.digestHex(charSequence.toString()).equals(s);
     }
 }
