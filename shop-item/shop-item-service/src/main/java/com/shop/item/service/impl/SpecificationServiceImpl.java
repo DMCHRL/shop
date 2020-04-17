@@ -21,7 +21,11 @@ public class SpecificationServiceImpl  implements SpecificationService {
 
     @Override
     public List<SpecGroup> groupsByCid(Long cid) {
-        return specGroupMapper.select(new SpecGroup().setCid(cid));
+        List<SpecGroup> groups = specGroupMapper.select(new SpecGroup());
+        for (SpecGroup specGroup : groups) {
+            specGroup.setParams(paramByGidOrCid(specGroup.getId(),null));
+        }
+        return groups;
     }
 
     @Override
