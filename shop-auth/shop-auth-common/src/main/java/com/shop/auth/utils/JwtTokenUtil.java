@@ -1,6 +1,6 @@
 package com.shop.auth.utils;
 
-import com.shop.auth.componment.JwtProperties;
+import com.shop.common.pojo.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

@@ -1,6 +1,7 @@
-package com.shop.auth.component;
+package com.shop.gateway.auth.component;
 
 import com.shop.auth.utils.JwtTokenUtil;
+import com.shop.common.pojo.JwtProperties;
 import com.shop.common.utils.CookieUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

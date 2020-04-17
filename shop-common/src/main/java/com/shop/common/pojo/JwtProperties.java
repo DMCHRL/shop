@@ -1,4 +1,4 @@
-package com.shop.auth.componment;
+package com.shop.common.pojo;
 
 
 import lombok.Data;

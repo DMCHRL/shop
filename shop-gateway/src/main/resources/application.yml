@@ -14,7 +14,6 @@ zuul:
     upload-service: /upload/**
     search-service: /search/**
     user-service: /user/**
-    auth-service: /auth/**
   prefix: /api
   sensitive-headers:  #允许带头信息
   add-host-header: true #携带域名信息

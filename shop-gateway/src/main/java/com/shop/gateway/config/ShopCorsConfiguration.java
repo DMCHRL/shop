@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class ShopCorsConfiguration {
 
     private static String[] originsVal = new String[]{
-            "www.shop.com:9002",
+            "www.shop.com",
             "localhost:9001",
             "manager.shop.com:9001"
     };
