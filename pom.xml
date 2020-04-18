@@ -18,7 +18,8 @@
         <module>shop-goods-web</module>
         <module>shop-user</module>
         <module>shop-sms</module>
-        <module>shop-auth</module>
+        <module>shop-cart</module>
+        <module>shop-order</module>
     </modules>
 
     <name>shop</name>

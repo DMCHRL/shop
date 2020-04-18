@@ -1,6 +1,6 @@
 package com.shop.gateway.auth.service;
 
-import com.shop.auth.utils.JwtTokenUtil;
+import com.shop.gateway.auth.utils.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

@@ -40,4 +40,6 @@ public interface SpuService {
 
     Map<String,Object> getGoodsDetails(Long spuId);
 
+    Sku findSkuById(Long skuId);
+
 }

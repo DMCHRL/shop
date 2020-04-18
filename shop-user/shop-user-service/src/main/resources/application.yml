@@ -8,8 +8,8 @@ spring:
     username: root
     password: 123456
   rabbitmq:
-    host: 192.168.1.135
-    #host: 192.168.236.129
+   # host: 192.168.1.135
+    host: 192.168.236.129
     port: 5672
     username: shop
     password: shop

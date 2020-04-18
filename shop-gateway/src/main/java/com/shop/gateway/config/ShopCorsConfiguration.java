@@ -14,6 +14,7 @@ public class ShopCorsConfiguration {
     private static String[] originsVal = new String[]{
             "www.shop.com",
             "localhost:9001",
+            "api.shop.com",
             "manager.shop.com:9001"
     };
 
