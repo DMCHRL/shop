@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/shop?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
     username: root
@@ -25,14 +29,7 @@ spring:
   redis:
     host: 192.168.226.129
     password: shop
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:10086/eureka
-  instance:
-    prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 5
-    lease-expiration-duration-in-seconds: 10
+
 mybatis:
   type-aliases-package: com.shop.item.pojo
   mapper-locations: mapper/OrderMapper.xml

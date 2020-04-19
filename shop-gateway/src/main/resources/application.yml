@@ -3,11 +3,10 @@ server:
 spring:
   application:
     name: shop-gateway
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:10086/eureka
-    registry-fetch-interval-seconds: 5
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
 zuul:
   routes:
     item-service: /item/**

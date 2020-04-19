@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: search-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
   data:
     elasticsearch:
       cluster-nodes: 192.168.236.129:9300
@@ -13,10 +17,3 @@ spring:
     port: 5672
     username: shop
     password: shop
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:10086/eureka
-  instance:
-    lease-expiration-duration-in-seconds: 15 #过期时间
-    lease-renewal-interval-in-seconds: 5 #心跳时间
