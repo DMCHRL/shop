@@ -5,11 +5,7 @@ spring:
     name: goods-web
   thymeleaf:
     cache: false #方便测试 生产环境可改为true
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:10086/eureka
-    registry-fetch-interval-seconds: 5
-  instance:
-    lease-expiration-duration-in-seconds: 15 #过期时间
-    lease-renewal-interval-in-seconds: 5 #心跳时间
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848

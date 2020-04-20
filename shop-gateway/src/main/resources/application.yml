@@ -3,17 +3,18 @@ server:
 spring:
   application:
     name: shop-gateway
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:10086/eureka
-    registry-fetch-interval-seconds: 5
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
 zuul:
   routes:
     item-service: /item/**
     upload-service: /upload/**
     search-service: /search/**
     user-service: /user/**
+    cart-service: /cart/**
+    order-service: /order/**
   prefix: /api
   sensitive-headers:  #允许带头信息
   add-host-header: true #携带域名信息

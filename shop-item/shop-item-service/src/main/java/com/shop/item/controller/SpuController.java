@@ -3,6 +3,7 @@ package com.shop.item.controller;
 import com.shop.common.pojo.PageResult;
 import com.shop.item.bo.GoodsSearchBO;
 import com.shop.item.dto.Goods;
+import com.shop.item.pojo.Sku;
 import com.shop.item.pojo.Spu;
 import com.shop.item.pojo.SpuDetail;
 import com.shop.item.service.SpuService;
@@ -42,6 +43,11 @@ public class SpuController {
     @GetMapping("detail/{spuId}")
     public ResponseEntity<SpuDetail> detail(@PathVariable Long spuId){
         return ResponseEntity.ok( spuService.getSpuDetails(spuId));
+    }
+
+    @GetMapping("/sku/{skuId}")
+    public ResponseEntity<Sku> findSkuById(@PathVariable Long skuId){
+        return ResponseEntity.ok( spuService.findSkuById(skuId));
     }
 
 }

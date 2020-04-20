@@ -656,7 +656,7 @@
 			ly: ly,
 			indexes: indexes,
 			genericSpec: genericSpec,
-			num: 1
+			num: 1,
 		},
 		components: {
 			lyTop: function () {
@@ -700,7 +700,7 @@
 				ly.verifyUser().then(res => {
 					// 已登录发送信息到后台，保存到redis中
 					ly.http.post("/cart", {skuId: this.sku.id, num: this.num}).then(res => {
-						location.href = "http://www.leyou.com/cart.html";
+						location.href = "http://www.shop.com/cart.html";
 					})
 				}).catch(() => {
 					// 未登录保存在浏览器本地的localStorage中
@@ -735,7 +735,7 @@
 					// 把carts写回localstorage
 					ly.store.set("carts", carts);
 					// 跳转到购物车页面
-					location.href = "http://www.leyou.com/cart.html";
+					location.href = "http://www.shop.com/cart.html";
 				})
 			}
 		}

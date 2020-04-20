@@ -1,8 +1,8 @@
 package com.shop.gateway.auth.component;
 
-import com.shop.auth.utils.JwtTokenUtil;
 import com.shop.common.pojo.JwtProperties;
 import com.shop.common.utils.CookieUtils;
+import com.shop.gateway.auth.utils.JwtTokenUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,9 @@
 package com.shop.gateway.auth.config;
 
-import com.shop.auth.componment.ShopPasswordEncoder;
 import com.shop.gateway.auth.component.JwtAuthenticationTokenFilter;
 import com.shop.gateway.auth.component.RestAuthenticationEntryPoint;
 import com.shop.gateway.auth.component.RestfulAccessDeniedHandler;
+import com.shop.gateway.auth.component.ShopPasswordEncoder;
 import com.shop.gateway.auth.service.GlobalUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

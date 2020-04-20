@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: item-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
   datasource:
     url: jdbc:mysql:///shop
     username: root
@@ -13,12 +17,6 @@ spring:
     username: shop
     password: shop
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:10086/eureka
-  instance:
-    lease-expiration-duration-in-seconds: 15 #过期时间
-    lease-renewal-interval-in-seconds: 5 #心跳时间
+
 mybatis:
   type-aliases-package: com.shop.item.pojo

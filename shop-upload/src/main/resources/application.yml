@@ -6,13 +6,10 @@ spring:
   servlet:
     multipart:
       max-file-size: 5MB
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:10086/eureka
-  instance:
-    lease-renewal-interval-in-seconds: 5
-    lease-expiration-duration-in-seconds: 15
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
 
 fdfs:
   so-timeout: 150100 #超时时间

@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: sms-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
   rabbitmq:
     host: 192.168.1.135
     #host: 192.168.236.129
@@ -20,10 +24,3 @@ spring:
     port: 6379
     password: shop
     timeout: 5000
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:10086/eureka
-  instance:
-    lease-expiration-duration-in-seconds: 15 #过期时间
-    lease-renewal-interval-in-seconds: 5 #心跳时间

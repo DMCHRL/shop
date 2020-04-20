@@ -253,4 +253,9 @@ public class SpuServiceImpl implements SpuService {
         model.put("paramMap",paramMap);
         return model;
     }
+
+    @Override
+    public Sku findSkuById(Long skuId) {
+        return skuMapper.selectByPrimaryKey(skuId);
+    }
 }
