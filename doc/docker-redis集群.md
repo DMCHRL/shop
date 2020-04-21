@@ -1,7 +1,9 @@
-第一步：
+### 第一步：
 在/home下创建redis_cluster目录
 在redis_cluster目录下创建 slave01~slave06 目录，每个目录包含redis700x.conf配置文件(本人使用的是7001-7006端口)
-配置文件如下
+配置文件如下   
+
+```
 port ${PORT}                                       ##节点端口
 protected-mode no                                  ##开启集群模式
 cluster-enabled yes                                ##cluster集群模式
@@ -11,38 +13,42 @@ cluster-announce-ip 192.168.XX.XX                  ##实际为各节点网卡分
 cluster-announce-port ${PORT}                      ##节点映射端口
 cluster-announce-bus-port 1${PORT}                 ##节点总线端口
 appendonly yes                                     ##持久化模式
-
-第二步：创建自定义network
-
+```
+### 第二步：创建自定义network
+```
 docker network create redis-net
+```
 
-第三步：
-
+### 第三步：启动六个redis节点
+```
 (docker pull redis:5.0.8)
 docker run  -p 7001:7001 -p 17001:17001 --name redis-slave1 -d -v /home/redis_cluster/slave01/redis7001.conf:/usr/local/etc/redis/redis.conf --net redis-net --restart=always redis:5.0.8  (7001-7006)
+```
 
-第四步：查看容器分配ip
-
+### 第四步：查看容器分配ip
+```
 docker network inspect redis-net
-
-第五步：修改配置文件并重启容器（7001-7006）
-
+```
+### 第五步：修改配置文件并重启容器（7001-7006）
+```
 port 7001
 protected-mode no
 cluster-enabled yes
 cluster-config-file nodes.conf
 cluster-node-timeout 5000
-cluster-announce-ip 172.18.0.2 #修改成容器分配的ip
+cluster-announce-ip 172.18.0.2  #修改成容器分配的ip
 cluster-announce-port 7001
 cluster-announce-bus-port 17001
 appendonly yes
-
-第六步：进入其中一个节点创建集群
-
+```
+### 第六步：进入其中一个节点创建集群
+```
 docker exec -it redis-slave1 bash
 redis-cli --cluster create 172.18.0.2:7001 172.18.0.3:7002 172.18.0.4:7003 172.18.0.5:7004 172.18.0.6:7005 172.18.0.7:7006 --cluster-replicas 1
+```
 
-#具体显示
+#### 具体显示
+```
 root@7cd530eaaf05:/data# redis-cli --cluster create 172.18.0.2:7001 172.18.0.3:7002 172.18.0.4:7003 172.18.0.5:7004 172.18.0.6:7005 172.18.0.7:7006 --cluster-replicas 1
 >>> Performing hash slots allocation on 6 nodes...
 Master[0] -> Slots 0 - 5460
@@ -106,5 +112,6 @@ repl_backlog_active:1
 repl_backlog_size:1048576
 repl_backlog_first_byte_offset:1
 repl_backlog_histlen:28
+```
 
 至此集群创建成功
