@@ -14,4 +14,4 @@
 ### 持续更新~
 
 ### 04/21
-[docker redis集群，三主三从](http://www.cnblogs.com/sxdcgaq8080/p/7894828.html)
+[docker redis集群，三主三从](https://github.com/DMCHRL/shop/blob/master/doc/docker-redis%E9%9B%86%E7%BE%A4.md)
