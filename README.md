@@ -9,7 +9,7 @@
 ## 有待优化
 1.使用MyBatis Generator自动生成基本服务的pojo，dto，mapper，service，controller层   
 2.各服务统一配置中心。  
-3.实现服务熔断，追   
+3.实现服务熔断，追踪  
 
 ### 持续更新~
 
